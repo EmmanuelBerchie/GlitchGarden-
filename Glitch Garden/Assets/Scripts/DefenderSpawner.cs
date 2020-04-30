@@ -24,7 +24,7 @@ public class DefenderSpawner : MonoBehaviour
     {
         var StarDisplay = FindObjectOfType<StarDisplay>();
         int defenderCost = defender.GetStarCost(); 
-        // if we have enough stars 
+        // if we have enough lives 
         if(StarDisplay.HaveEnoughStars(defenderCost))
         {
             SpawnDefender(gridPos);

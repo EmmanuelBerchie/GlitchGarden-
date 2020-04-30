@@ -1,14 +1,13 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using UnityEngine;
+
 
 public class AttackerSpawner : MonoBehaviour
 {
     bool spawn = true;
     [SerializeField] float minSpawnDelay = 1f;
     [SerializeField] float maxSpawnDelay = 5f;
-    [SerializeField] Attacker attackerPrefab; 
+    [SerializeField] Attacker[] attackerPrefabArray; 
 
    
 
@@ -22,19 +21,28 @@ public class AttackerSpawner : MonoBehaviour
         }
     }
 
+    public void StopSpwaning()
+    {
+        spawn = false; 
+    }
     private void SpawnAttacker()
     {
-       Attacker newAttacker =  Instantiate
-            (attackerPrefab, transform.position, transform.rotation)
-            as Attacker;
-        //show the position of the attackers 
-       // allows us to spawn a new attacker as a child to the game object which instantiated it
-        newAttacker.transform.parent = transform; 
+        // responsible for picking an attacker index from the array 
+        var attackerIndex = Random.Range(0, attackerPrefabArray.Length); 
+
+
+        Spawn(attackerPrefabArray[attackerIndex]);
+      
     }
 
-    // Update is called once per frame
-    void Update()
+    private void  Spawn(Attacker myAttacker)
     {
         
+        Attacker newAttacker = Instantiate
+                    (myAttacker, transform.position, transform.rotation)
+                    as Attacker;  
+        newAttacker.transform.parent = transform;
     }
+
+    
 }
