@@ -1326,6 +1326,21 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5587372715139965128, guid: 0461c91355092d84fb092c3d9c10591f,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.6886792
+      objectReference: {fileID: 0}
+    - target: {fileID: 5587372715139965128, guid: 0461c91355092d84fb092c3d9c10591f,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.778268
+      objectReference: {fileID: 0}
+    - target: {fileID: 5587372715139965128, guid: 0461c91355092d84fb092c3d9c10591f,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5587372716589425135, guid: 0461c91355092d84fb092c3d9c10591f,
         type: 3}
       propertyPath: m_LocalPosition.x
