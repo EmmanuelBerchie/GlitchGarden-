@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 
 
@@ -7,9 +8,12 @@ public class AttackerSpawner : MonoBehaviour
     bool spawn = true;
     [SerializeField] float minSpawnDelay = 1f;
     [SerializeField] float maxSpawnDelay = 5f;
-    [SerializeField] Attacker[] attackerPrefabArray; 
+    [SerializeField] Attacker[] attackerPrefabArray;
 
-   
+  //  GameObject attackerParent;
+   // const string ATTACKER_PARENT_NAME = "Attackers";
+
+
 
     IEnumerator Start()
     {
@@ -19,7 +23,19 @@ public class AttackerSpawner : MonoBehaviour
             yield return new WaitForSeconds(UnityEngine.Random.Range(minSpawnDelay, maxSpawnDelay));
             SpawnAttacker(); 
         }
+
+      //  CreateAttackerParent();
     }
+
+  /*  private void CreateAttackerParent()
+    {
+        attackerParent = GameObject.Find(ATTACKER_PARENT_NAME);
+        
+        if(!attackerParent)
+        {
+            attackerParent = new GameObject(ATTACKER_PARENT_NAME); 
+        }
+    }*/
 
     public void StopSpwaning()
     {
@@ -28,7 +44,7 @@ public class AttackerSpawner : MonoBehaviour
     private void SpawnAttacker()
     {
         // responsible for picking an attacker index from the array 
-        var attackerIndex = Random.Range(0, attackerPrefabArray.Length); 
+        var attackerIndex = UnityEngine.Random.Range(0, attackerPrefabArray.Length); 
 
 
         Spawn(attackerPrefabArray[attackerIndex]);
@@ -42,6 +58,7 @@ public class AttackerSpawner : MonoBehaviour
                     (myAttacker, transform.position, transform.rotation)
                     as Attacker;  
         newAttacker.transform.parent = transform;
+       // newAttacker.transform.parent = attackerParent.transform;
     }
 
     

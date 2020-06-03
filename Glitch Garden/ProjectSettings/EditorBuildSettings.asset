@@ -15,11 +15,23 @@ EditorBuildSettings:
     path: Assets/Scenes/Start Scene.unity
     guid: 6592a9c3378481d48bad7cc0085fbff6
   - enabled: 1
-    path: Assets/Scenes/Level 1.unity
+    path: Assets/Scenes/Level 1 - Cactus.unity
     guid: cc902efe3c3da9d4198f1b6af9329ef1
   - enabled: 1
-    path: Assets/Scenes/Level 2.unity
-    guid: 87a0ed8c36e58dd4b9f2074503da0645
+    path: Assets/Scenes/Level 2 - Resources.unity
+    guid: 43f8019f3e6566f44a636868c5d2b6ca
+  - enabled: 1
+    path: Assets/Scenes/Level 3 - Gravestone.unity
+    guid: e42d14edefd1f8d42aa0cca26fb9b7ae
+  - enabled: 1
+    path: Assets/Scenes/Level 4.unity
+    guid: 40fff827266397b4ab9c5d03d63c9b90
+  - enabled: 1
+    path: Assets/Scenes/Level 5.unity
+    guid: 95bca3b0e4b83c942b5f9be7d123a53f
+  - enabled: 1
+    path: Assets/Scenes/Level 6.unity
+    guid: e1848934e9f203b4b851ec23c7d9bdf2
   - enabled: 1
     path: Assets/Scenes/Game Over.unity
     guid: 049f596e2e13a5a458ae4e6a7bc0f902
