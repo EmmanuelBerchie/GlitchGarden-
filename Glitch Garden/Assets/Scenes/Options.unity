@@ -2452,5 +2452,10 @@ PrefabInstance:
       propertyPath: difficultySlider
       value: 
       objectReference: {fileID: 52043637}
+    - target: {fileID: 5031796273325298901, guid: 651126ae9afec7d40996262c4f48a1f9,
+        type: 3}
+      propertyPath: defaultVolume
+      value: 0.6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 651126ae9afec7d40996262c4f48a1f9, type: 3}
